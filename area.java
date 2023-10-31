@@ -1,24 +1,24 @@
 import java.util.*;
 class area_calculate
 {
-     double area;
-     final double pi=3.14;
-     double Area(int radius)
+     static double area;
+     static final double pi=3.14;
+     static void Area(double radius)
      {
         area=pi*radius*radius;
-        return area;
+        System.out.println(area);
      }
    
-     double Area(int length,int breadth)
+     static void Area(double length,double breadth)
      {
         area=length*breadth;
-        return area;
+        System.out.println(area);
      }
  
-     double Area(int base,int height,int width)
+     static void Area(double base,double height,double width)
      {
         area=0.5*base*height;
-        return area;
+        System.out.println(area);
      }
 }
 
@@ -34,25 +34,25 @@ class area
       {
         case 1:
             System.out.println("Enter radius: ");
-            int r=s.nextInt();
+            double r=s.nextDouble();
             System.out.println("Area of circle is: ");
-            area_calculate.Area(r);
+            ar.Area(r);
             break;
         case 2:
             System.out.println("Enter length:");
-            int l=s.nextInt();
+            double l=s.nextDouble();
             System.out.println("Enter breadth:");
-            int b=s.nextInt();
+            double b=s.nextDouble();
             System.out.println("Area of rectangle is:");
-            area_calculate.Area(l,b);
+            ar.Area(l,b);
             break;
         case 3:
             System.out.println("Enter base:");
-            int base=s.nextInt();
+            double base=s.nextDouble();
             System.out.println("Enter height:");
-            int h=s.nextInt();
+            double h=s.nextDouble();
             System.out.println("Area of rectangle is:");
-            area_calculate.Area(base,h,0);
+            ar.Area(base,h,0);
             break;
         default:
             System.out.println("Invalid choice");
